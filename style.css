@@ -1,11 +1,5 @@
-/* ============================================================
-   style.css — Rosie's Hair Studio
-   Aesthetic: Warm, editorial luxury — cream, rose, blush
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
 
-/* ── CSS Variables ──────────────────────────────────────── */
 :root {
   --bg:        #0f0b0b;
   --surface:   #151010;
@@ -29,7 +23,6 @@
   --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Reset & Base ───────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
@@ -45,7 +38,6 @@ img { display: block; max-width: 100%; }
 a   { color: inherit; text-decoration: none; }
 ul  { list-style: none; }
 
-/* ── Utility ────────────────────────────────────────────── */
 .container {
   width: 100%;
   max-width: var(--max-w);
@@ -77,7 +69,6 @@ ul  { list-style: none; }
   margin: 28px 0;
 }
 
-/* ── Scroll Reveal ──────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -89,7 +80,6 @@ ul  { list-style: none; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* ── Navigation ─────────────────────────────────────────── */
 .nav {
   position: fixed;
   top: 0; left: 0;
@@ -185,7 +175,6 @@ ul  { list-style: none; }
 .nav__burger.open span:nth-child(2) { opacity: 0; }
 .nav__burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── Hero ───────────────────────────────────────────────── */
 .hero {
   min-height: 100svh;
   display: flex;
@@ -312,7 +301,6 @@ ul  { list-style: none; }
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
-/* ── Services ───────────────────────────────────────────── */
 .services {
   padding: var(--section-pad) 0;
   border-top: 1px solid var(--border);
@@ -369,7 +357,6 @@ ul  { list-style: none; }
   line-height: 1.75;
 }
 
-/* ── About ──────────────────────────────────────────────── */
 .about {
   padding: var(--section-pad) 0;
   border-top: 1px solid var(--border);
@@ -453,7 +440,6 @@ ul  { list-style: none; }
   color: var(--muted);
 }
 
-/* ── Contact ────────────────────────────────────────────── */
 .contact {
   padding: var(--section-pad) 0;
   border-top: 1px solid var(--border);
@@ -533,7 +519,6 @@ ul  { list-style: none; }
   border: 1px solid rgba(220,80,80,0.3);
 }
 
-/* ── Footer ─────────────────────────────────────────────── */
 .footer {
   border-top: 1px solid var(--border);
   padding: 36px 0;
@@ -565,7 +550,6 @@ ul  { list-style: none; }
 }
 .footer__links a:hover { color: var(--rose); }
 
-/* ── Keyframes ──────────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -577,7 +561,6 @@ ul  { list-style: none; }
   0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 900px) {
   .about__inner { grid-template-columns: 1fr; }
   .about__visual { aspect-ratio: 16/7; }
