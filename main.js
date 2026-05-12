@@ -1,17 +1,11 @@
-// ============================================================
-//  main.js — Contact form + UI interactions
-// ============================================================
-
 import { db, collection, addDoc, serverTimestamp }
   from "./firebase-config.js";
 
-// ── Sticky nav shadow ─────────────────────────────────────
 const nav = document.querySelector(".nav");
 window.addEventListener("scroll", () => {
   nav.classList.toggle("nav--scrolled", window.scrollY > 40);
 });
 
-// ── Mobile hamburger ──────────────────────────────────────
 const burger = document.querySelector(".nav__burger");
 const navMenu = document.querySelector(".nav__links");
 burger.addEventListener("click", () => {
@@ -25,7 +19,6 @@ navMenu.querySelectorAll("a").forEach(link =>
   })
 );
 
-// ── Smooth scroll for anchor links ───────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", e => {
     e.preventDefault();
@@ -34,7 +27,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ── Scroll-reveal animation ───────────────────────────────
 const revealEls = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(
   entries => entries.forEach(e => {
@@ -47,7 +39,6 @@ const observer = new IntersectionObserver(
 );
 revealEls.forEach(el => observer.observe(el));
 
-// ── Contact form → Firestore ──────────────────────────────
 const form    = document.getElementById("contact-form");
 const btn     = document.getElementById("form-btn");
 const status  = document.getElementById("form-status");
@@ -63,7 +54,6 @@ form.addEventListener("submit", async e => {
 
   if (!name || !email || !message) return;
 
-  // Loading state
   btn.disabled    = true;
   btn.textContent = "Sending…";
   status.className = "";
@@ -92,7 +82,6 @@ form.addEventListener("submit", async e => {
   }
 });
 
-// ── Active nav link on scroll ─────────────────────────────
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav__links a");
 window.addEventListener("scroll", () => {
