@@ -1,10 +1,3 @@
-// ============================================================
-//  FIREBASE CONFIGURATION — plug your project details in here
-//  1. Go to console.firebase.google.com
-//  2. Create / open your project → Project Settings → Your apps
-//  3. Register a Web app and copy the config object below
-// ============================================================
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getFirestore, collection, addDoc, serverTimestamp }
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
